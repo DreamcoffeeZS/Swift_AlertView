@@ -1,0 +1,2 @@
+# Swift_AlertView
+Swift实现一个自定义的弹窗，需要结合SnapKit的使用，增加了弹窗动画弹出和消失
