@@ -2,8 +2,8 @@
 //  MyAlertView.swift
 //  SwiftConsultant
 //
-//  Created by Bjmsp on 2017/7/12.
-//  Copyright © 2017年 Bjmsp. All rights reserved.
+//  Created by zhoushuai on 2017/7/12.
+//  Copyright © 2017年 Zhoushuai. All rights reserved.
 //
 
 import UIKit
