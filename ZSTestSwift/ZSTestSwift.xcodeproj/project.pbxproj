@@ -19,8 +19,6 @@
 		E9DA7ECD1F18CBAB007FCE21 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA7ECB1F18CBAB007FCE21 /* BaseViewController.swift */; };
 		E9DA7ED01F18CBD2007FCE21 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA7ECE1F18CBD2007FCE21 /* TestViewController.swift */; };
 		E9DA7ED11F18CBD2007FCE21 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9DA7ECF1F18CBD2007FCE21 /* TestViewController.xib */; };
-		E9DA7ED41F18CBE7007FCE21 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9DA7ED21F18CBE7007FCE21 /* ResultViewController.swift */; };
-		E9DA7ED51F18CBE7007FCE21 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9DA7ED31F18CBE7007FCE21 /* ResultViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +59,6 @@
 		E9DA7ECB1F18CBAB007FCE21 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E9DA7ECE1F18CBD2007FCE21 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		E9DA7ECF1F18CBD2007FCE21 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
-		E9DA7ED21F18CBE7007FCE21 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		E9DA7ED31F18CBE7007FCE21 /* ResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,8 +196,6 @@
 				E99DB8631F1A0AA40029E730 /* AlertView */,
 				E9DA7ECE1F18CBD2007FCE21 /* TestViewController.swift */,
 				E9DA7ECF1F18CBD2007FCE21 /* TestViewController.xib */,
-				E9DA7ED21F18CBE7007FCE21 /* ResultViewController.swift */,
-				E9DA7ED31F18CBE7007FCE21 /* ResultViewController.xib */,
 			);
 			path = TestFiles;
 			sourceTree = "<group>";
@@ -331,7 +325,6 @@
 				E9DA7E8F1F18C8E9007FCE21 /* LaunchScreen.storyboard in Resources */,
 				E9DA7E8C1F18C8E9007FCE21 /* image.xcassets in Resources */,
 				E9DA7ED11F18CBD2007FCE21 /* TestViewController.xib in Resources */,
-				E9DA7ED51F18CBE7007FCE21 /* ResultViewController.xib in Resources */,
 				E9DA7E8A1F18C8E9007FCE21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,7 +398,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9DA7ED41F18CBE7007FCE21 /* ResultViewController.swift in Sources */,
 				E9DA7EB61F18C976007FCE21 /* AppDelegate.swift in Sources */,
 				E9DA7ECC1F18CBAB007FCE21 /* BaseNavigationViewController.swift in Sources */,
 				E99DB8651F1A0AA40029E730 /* MyAlertView.swift in Sources */,

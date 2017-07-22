@@ -38,35 +38,35 @@ class MyAlertView: UIView {
     var thirdBtnAction:MyAlertViewBtnAction?
 
     //MARK:布局弹窗使用的默认参数
-    let mainViewLeftPadding = 50.0  //主视图距离屏幕两端的距离
-    let subViewLeftPadding  = 15.0  //主视图上子控件距离左边缘的距离
-    let subviewTopPadding = 15.0    //主视图上子控件距离上边缘的距离
-    let lineViewHeight = 0.5        //主视图分割线高度
-    let btnHeight = 45.0            //主视图上按钮的高度
-    let backgroundViewAlpha:CGFloat = 0.5
-    let titleLabelFont = UIFont.systemFont(ofSize: 17) //标题文字、内容文字、按钮文字大小
-    let contentLabelFont = UIFont.systemFont(ofSize: 13)
-    let buttonTitleFont = UIFont.systemFont(ofSize: 15)
-    let backgroundViewColor = UIColor.black //背景色、主视图、分割线等颜色
-    let mainViewColor = UIColor.white
-    let lineViewColor = UIColor.gray
-    let buttonBackgroundColor = UIColor.white
-    let buttonTitleNormalColor = UIColor.black
-    let buttonTitleAnotherColor = UIColor.red
-    let windowWidth = UIScreen.main.bounds.size.width
-    let windowHeight = UIScreen.main.bounds.size.height
+    private let mainViewLeftPadding = 50.0  //主视图距离屏幕两端的距离
+    private let subViewLeftPadding  = 15.0  //主视图上子控件距离左边缘的距离
+    private let subviewTopPadding = 15.0    //主视图上子控件距离上边缘的距离
+    private let lineViewHeight = 0.5        //主视图分割线高度
+    private let btnHeight = 45.0            //主视图上按钮的高度
+    private let backgroundViewAlpha:CGFloat = 0.5
+    private let titleLabelFont = UIFont.systemFont(ofSize: 17) //标题文字大小
+    private let contentLabelFont = UIFont.systemFont(ofSize: 13) //内容文字大小
+    private let buttonTitleFont = UIFont.systemFont(ofSize: 15) //按钮文字大小
+    private let backgroundViewColor = UIColor.black //背景色、主视图、分割线等颜色
+    private let mainViewColor = UIColor.white
+    private let lineViewColor = UIColor.gray
+    private let buttonBackgroundColor = UIColor.white
+    private let buttonTitleNormalColor = UIColor.black
+    private let buttonTitleAnotherColor = UIColor.red
+    private let windowWidth = UIScreen.main.bounds.size.width
+    private let windowHeight = UIScreen.main.bounds.size.height
 
     var gestureEnable:Bool = false //点击手势是否可以使用
 
     //MARK:UI控件懒加载
-    lazy var backgroundView:UIView = {
+    private lazy var backgroundView:UIView = {
         let backgroundView = UIView.init()
         backgroundView.backgroundColor = self.backgroundViewColor
         backgroundView.alpha = self.backgroundViewAlpha
         return backgroundView
     }()
     
-    lazy var mainView:UIView = {
+    private lazy var mainView:UIView = {
        let mainView = UIView.init()
         mainView.backgroundColor = self.mainViewColor
         mainView.layer.cornerRadius = 8;
@@ -74,7 +74,7 @@ class MyAlertView: UIView {
         return mainView
     }()
     
-    lazy var titleLabel:UILabel = {
+    private lazy var titleLabel:UILabel = {
         //标题Label
         let titleLabel = UILabel.init()
         titleLabel.textAlignment = NSTextAlignment.center
@@ -82,7 +82,7 @@ class MyAlertView: UIView {
         return titleLabel
     }()
     
-    lazy var contentLabel:UILabel = {
+    private lazy var contentLabel:UILabel = {
         //内容Label
         let contentLabel = UILabel.init()
         contentLabel.textAlignment = NSTextAlignment.center
@@ -91,14 +91,14 @@ class MyAlertView: UIView {
         return contentLabel
     }()
     
-    lazy var lineOneView:UIView = {
+    private lazy var lineOneView:UIView = {
         //分割线1
         let lineOneView = UIView.init()
         lineOneView.backgroundColor = self.lineViewColor
         return lineOneView
     }()
     
-    lazy var lineTwoView:UIView = {
+    private lazy var lineTwoView:UIView = {
         //分割线2
         let lineTwoView = UIView.init()
         lineTwoView.backgroundColor = self.lineViewColor
@@ -106,21 +106,21 @@ class MyAlertView: UIView {
     }()
     
     
-    lazy var firstBtn:UIButton = {
+    private lazy var firstBtn:UIButton = {
         //按钮1
         let firstBtn:UIButton = self.createButton()
         firstBtn.addTarget(self, action: #selector(firstBtnClick), for: .touchUpInside)
         return firstBtn
     }()
     
-    lazy var secondBtn:UIButton = {
+    private lazy var secondBtn:UIButton = {
         //按钮2
         let secondBtn:UIButton = self.createButton()
         secondBtn.addTarget(self, action: #selector(secondBtnClick), for: .touchUpInside)
         return secondBtn
     }()
     
-    lazy var thirdBtn:UIButton = {
+    private lazy var thirdBtn:UIButton = {
         //按钮3
         let thirdBtn:UIButton = self.createButton()
         thirdBtn.addTarget(self, action: #selector(thirdBtnClick), for: .touchUpInside)
@@ -392,9 +392,8 @@ extension MyAlertView:UIGestureRecognizerDelegate {
 
 //MARK: - Extension - 专门为Main增加的动画扩展
 extension UIView{
-    
     //弹窗效果：弹簧效果出现
-    func showAlertViewAnimation(){
+   fileprivate func showAlertViewAnimation(){
         let forwardAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
         forwardAnimation.duration = 0.5
         forwardAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.5, 1.7, 0.6, 0.85)
@@ -404,7 +403,7 @@ extension UIView{
     }
     
     //弹窗效果：弹簧效果消失
-    func hideAlertDisappearAnimation(){
+    fileprivate func hideAlertDisappearAnimation(){
         let reverseAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.scale")
         reverseAnimation.duration = 0.5
         reverseAnimation.timingFunction = CAMediaTimingFunction(controlPoints: 0.4, 0.15, 0.5, -0.7)

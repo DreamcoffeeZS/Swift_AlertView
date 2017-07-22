@@ -23,7 +23,6 @@ class TestViewController: BaseViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.title = "测试界面"
-
      }
 
     override func didReceiveMemoryWarning() {
@@ -31,9 +30,6 @@ class TestViewController: BaseViewController {
     }
 
     //MARK: - Event Response
-
-
-
     //测试单按钮弹窗
     @IBAction func testBtnClick_normal(_ sender: Any) {
         //因为这次的style类型为Normal，需要提前设置好UI参数
